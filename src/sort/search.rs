@@ -22,11 +22,10 @@ pub fn binary_search<T: Ord + std::fmt::Debug>(
     } else if *mid_element > i {
         return binary_search(v, i, start_index, mid - 1_usize);
     } else if *mid_element < i {
-        if start_index <= mid {
+        if start_index > end_index {
             return Err(mid);
-        } else {
-            return binary_search(v, i, mid + 1_usize, end_index);
         }
+        return binary_search(v, i, mid + 1_usize, end_index);
     } else {
         return Err(mid);
     }
