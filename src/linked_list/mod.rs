@@ -60,11 +60,10 @@ impl <T:PartialEq + Copy + Ord + std::fmt::Debug> LinkedList <T> {
         if self.length == 0 {
             println!("no element to pop")
         }else {
-            let  temp = &mut self.head;
+            let  temp = self.head.take();
             self.head = match temp {
                 Some(it) => {
-                    let k = it;
-                    Some(k)
+                    Some(it)
                 },
                 None => None,
             };
