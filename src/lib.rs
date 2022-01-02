@@ -1,7 +1,8 @@
-mod linked_list;
-mod sort;
 mod find_first_and_last_position_of_element_in_sorted_array;
+mod linked_list;
 mod search_in_rotated_sorted_array;
+mod sort;
+mod swap_nodes_in_pairs;
 
 #[cfg(test)]
 mod tests {
